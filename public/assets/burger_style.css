@@ -2,9 +2,20 @@
     background-image: url("./burger.png");
     background-position: right;
     background-color: #c5e9b5;
-    color: #181717;
+    color: #031b0a;
     margin-top: 3%;
+    font-family: bold;
   }
   
+.devour {
+    margin-left:65%;
+}
 
+.bovine {
+    font-size: 25rem;
+}
+
+body {
+    background-color: rgb(241, 241, 106);
+}
 

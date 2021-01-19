@@ -3,7 +3,7 @@
 {{!-- Create a button in `index.handlebars` that will submit the user input into the database. --}}
 <div class="container">
   <div class="jumbotron">
-        <h1>The Big Bad Bovine Booker </h1>
+        <h1 class="bovine">The Big Bad Bovine Booker </h1>
         <br>
         <h2>Create the tastiest</h2>
         <panel>
@@ -21,8 +21,10 @@
         </panel>
     </div>
   <div class="panel-body"></div>
-
-<h2>Burgers TO BE devoured</h2>
+</div>
+  <div class="container">
+    <h2>Burgers TO BE devoured</h2>
+      <hr>
       <ul>
       {{#each burgers}}
       {{#unless devoured}}
@@ -36,23 +38,27 @@
       {{/unless}}
       {{/each}}
       </ul>
+  </div>
 
+</div>
 
-
-  <h2 class="devour">Burgers DEVOURED!</h2>
-  <ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+<div class="container-fluid">
+    <div class="devour">
+        <h2>Burgers DEVOURED!</h2>
+            <hr>
+           <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
       
-      <button type="button" class="eatburger btn btn-primary" id="eatbutton" data-id="{{this.id}}"
-      data-newDevoured="{{devour}}"><span class="fa fa-cutlery"></span></button>
-      <hr>
-    {{/if}}
-  {{/each}}
-  </ul>
-  
-    
+            <button type="button" class="eatburger btn btn-primary" id="eatbutton" data-id="{{this.id}}"
+            data-newDevoured="{{devour}}"><span class="fa fa-cutlery"></span></button>
+            <hr>
+            {{/if}}
+            {{/each}}
+           </ul>
+         
+    </div> 
 </div>
 
                 
