@@ -1,0 +1,26 @@
+{
+  "name": "the-big-bad-bovine-booker",
+  "version": "1.0.0",
+  "description": "a burger booker",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carpegavin/The-Big-Bad-Bovine-Booker.git"
+  },
+  "author": "gavin phill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carpegavin/The-Big-Bad-Bovine-Booker/issues"
+  },
+  "homepage": "https://github.com/carpegavin/The-Big-Bad-Bovine-Booker#readme"
+}

@@ -1,0 +1,8 @@
+.jumbotron {
+    background-image: url("./assets/burger.png");
+    background-position: right;
+    background-color: #df0e0e;
+    color: #181717;
+    margin-top: 3%;
+  }
+  
