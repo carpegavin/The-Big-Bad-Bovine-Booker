@@ -4,18 +4,37 @@
     background-color: #c5e9b5;
     color: #031b0a;
     margin-top: 3%;
-    font-family: bold;
+    font-family:'Franklin Gothic Medium';
   }
   
-.devour {
-    margin-left:65%;
-}
-
-.bovine {
-    font-size: 25rem;
+.booker {
+    font-size: 10rem;
 }
 
 body {
     background-color: rgb(241, 241, 106);
 }
 
+label {
+    font-size: 2rem;
+}
+
+.taste {
+    font-size: 4rem;
+}
+
+.col-md-4 {
+    margin-left: 15rem;
+}
+
+.col-md-6 {
+    margin-right: 5rem;
+}
+
+.eaten {
+    font-size: 2rem;
+}
+
+.toeat {
+    font-size: 2rem;
+}

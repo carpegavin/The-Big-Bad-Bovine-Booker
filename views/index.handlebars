@@ -3,9 +3,9 @@
 {{!-- Create a button in `index.handlebars` that will submit the user input into the database. --}}
 <div class="container">
   <div class="jumbotron">
-        <h1 class="bovine">The Big Bad Bovine Booker </h1>
+        <h1 class="booker">The Big Bad Bovine Booker </h1>
         <br>
-        <h2>Create the tastiest</h2>
+        <h2 class="taste">Create the tastiest</h2>
         <panel>
             <form class="create-form">
                 <div class="form-group">
@@ -13,19 +13,19 @@
                       <label for="ca">Burger</label>
                       <input type="text" id="ca" name="name">
                     </div>
-                    <button type="submit" class="btn     btn-success" id="addburger">
+                    <button type="submit" class="btn btn-success" id="addburger">
                     <span ><i class="fas fa-hamburger"></i> ></span>
                     </button>
                 </div>
             </form>
         </panel>
     </div>
-  <div class="panel-body"></div>
 </div>
-  <div class="container">
+  
+<div class="col-md-4">
     <h2>Burgers TO BE devoured</h2>
       <hr>
-      <ul>
+      <ul class="toeat">
       {{#each burgers}}
       {{#unless devoured}}
 
@@ -38,21 +38,21 @@
       {{/unless}}
       {{/each}}
       </ul>
-  </div>
-
 </div>
 
-<div class="container-fluid">
+
+
+<div class="col-md-4">
     <div class="devour">
         <h2>Burgers DEVOURED!</h2>
             <hr>
-           <ul>
+           <ul class="eaten">
             {{#each burgers}}
             {{#if devoured}}
             <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
       
-            <button type="button" class="eatburger btn btn-primary" id="eatbutton" data-id="{{this.id}}"
-            data-newDevoured="{{devour}}"><span class="fa fa-cutlery"></span></button>
+            {{!-- <button type="button" class="eatburger btn btn-primary" id="eatbutton" data-id="{{this.id}}"
+            data-newDevoured="{{devour}}"><span class="fa fa-done"></span></button> --}}
             <hr>
             {{/if}}
             {{/each}}
