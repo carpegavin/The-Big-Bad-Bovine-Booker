@@ -10,41 +10,49 @@
             <form class="create-form">
                 <div class="form-group">
                     <div class="form-group">
-                      <label for="ca">Burger Name</label>
+                      <label for="ca">Burger</label>
                       <input type="text" id="ca" name="name">
                     </div>
                     <button type="submit" class="btn     btn-success" id="addburger">
-                    <span class="fas">&#xf805;></span>
+                    <span ><i class="fas fa-hamburger"></i> ></span>
                     </button>
                 </div>
             </form>
         </panel>
     </div>
+  <div class="panel-body"></div>
 
-  <h2>Burgers DEVOURED!</h2>
+<h2>Burgers TO BE devoured</h2>
+      <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
 
+      <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+      
+      <button type="button" class="eatburger btn btn-primary" id="eatbutton" data-id="{{this.id}}"
+      data-newDevoured="{{devour}}"><span class="fa fa-cutlery"></span></button>
+      <hr>
+     
+      {{/unless}}
+      {{/each}}
+      </ul>
+
+
+
+  <h2 class="devour">Burgers DEVOURED!</h2>
   <ul>
   {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/burger-block devour=false}}
+      <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+      
+      <button type="button" class="eatburger btn btn-primary" id="eatbutton" data-id="{{this.id}}"
+      data-newDevoured="{{devour}}"><span class="fa fa-cutlery"></span></button>
+      <hr>
     {{/if}}
   {{/each}}
   </ul>
   
-  <div class="panel-body"></div>
-    <h2>Burgers waiting to be devoured</h2>
-    <ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-
-    <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
-    <button type="button" class="eatburger btn btn-primary" id="eatbutton" data-id="{{this.id}}"
-    data-newDevoured="{{devour}}"><span class="fa fa-cutlery"></span></button>
-    <hr>
-    {{/unless}}
-    {{/each}}
-    </ul>
-
+    
 </div>
 
                 
